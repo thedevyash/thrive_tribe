@@ -7,12 +7,5 @@ import 'package:thrive_tribe/Pages/TODO.dart';
 
 // ignore: camel_case_types
 class models {
-  static const List<Widget> _pages = [
-    HomeScreen(),
-    CommunityPage(),
-    ChatBot(),
-    TODO(),
-    Settings()
-  ];
   static const List<BottomNavigationBarItem> items = [];
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:thrive_tribe/cards/meditation.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HomeScreenPage extends StatefulWidget {
@@ -62,43 +63,43 @@ class Meditation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Card(
-          color: Color.fromARGB(255, 0, 0, 0),
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
-          child: SizedBox(
-              height: 200,
-              width: 150,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  gradient: LinearGradient(
-                      begin: Alignment.bottomCenter,
-                      end: Alignment.topCenter,
-                      colors: [
-                        Vx.hexToColor("#4A148C"),
-                        Vx.hexToColor("#311B92")
-                      ]),
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/medi.png")),
+    return Card(
+      elevation: 16,
+      shadowColor: const Color.fromARGB(255, 0, 0, 0),
+      clipBehavior: Clip.hardEdge,
+      color: Color.fromARGB(255, 0, 0, 0),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
+      child: SizedBox(
+        height: 200,
+        width: 150,
+        child: Ink(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [Vx.hexToColor("#4A148C"), Vx.hexToColor("#311B92")]),
+            image: DecorationImage(image: AssetImage("assets/images/medi.png")),
+          ),
+          child: InkWell(
+            onTap: () => Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => mediCard())),
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 6.0),
+              child:
+                  Column(mainAxisAlignment: MainAxisAlignment.end, children: [
+                Text(
+                  "Meditate",
+                  style: GoogleFonts.lobster(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 6.0),
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text(
-                          "Meditate",
-                          style: GoogleFonts.lobster(
-                            color: Colors.white,
-                            fontSize: 24,
-                          ),
-                        ),
-                      ]),
-                ),
-              ))),
+              ]),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
