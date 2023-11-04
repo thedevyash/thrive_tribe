@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "863686489706",
+    "project_id": "thrivetribe-da030",
+    "storage_bucket": "thrivetribe-da030.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863686489706:android:89508d5bfebe188b977c13",
+        "android_client_info": {
+          "package_name": "com.example.thrive_tribe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3GSIulMvkr9ng3sW8xmoH4qkxS2IPj9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

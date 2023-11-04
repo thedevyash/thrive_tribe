@@ -10,6 +10,6 @@ class mediCard extends StatefulWidget {
 class _mediCardState extends State<mediCard> {
   @override
   Widget build(BuildContext context) {
-    return Text("mediCard");
+    return Scaffold(body: Text("mediCard"));
   }
 }
